@@ -21,20 +21,8 @@ async def main_teletips():
                 TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
                 Time_teletips = TimeZone_teletips.strftime("%I:%M %p")
                 Date_teletips = TimeZone_teletips.strftime("%b %d")
-                Image_teletips = Image.open("image.jpg")
-                Image_font_teletips = ImageFont.truetype("ds-digit.ttf", 360)
-                Image_text_teletips = f"{Quotes_teletips}"
-                Image_edit_teletips = ImageDraw.Draw(Image_teletips)
-                Image_edit_teletips.text((690, 550), Image_text_teletips, (0, 255, 255), font = Image_font_teletips)
-                Image_teletips.save("Image_final_teletips.jpg")
+
                 await app.update_profile(bio = f"{Emojis_teletips} {Quotes_teletips}" , last_name = f"| ⏰ {Time_teletips} | 📅 {Date_teletips}")
-                await app.set_profile_photo(photo="Image_final_teletips.jpg")
-                me = await app.get_me()
-                photos = app.get_chat_photos("me")
-                try:
-                    await app.delete_profile_photos(photos[1].file_id)
-                except Exception:
-                    pass
                 print(f"Profile Yangilandi {Time_teletips}")
             await asyncio.sleep(60)
     except FloodWait as e:
