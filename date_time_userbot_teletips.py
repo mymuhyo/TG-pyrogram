@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.handlers import message_handler
-from lists_teletips.quotes_teletips import *
-from lists_teletips.emojis_teletips import *
+from lists_teletips.quotes import *
+from lists_teletips.emojis import *
 from PIL import Image, ImageDraw, ImageFont
 import datetime
 import pytz
@@ -26,8 +26,8 @@ async def main_teletips():
     try:
         while True:
             if Date_Time_Userbot_teletips.is_connected:
-                Quotes_teletips = random.choice(quotes_teletips)
-                Emojis_teletips = random.choice(emojis_teletips)
+                Quotes_teletips = random.choice(quotes_muhyo)
+                Emojis_teletips = random.choice(emojis_muhyo)
                 TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
                 Time_teletips = TimeZone_teletips.strftime("%I:%M %p")
                 Date_teletips = TimeZone_teletips.strftime("%b %d")
@@ -41,5 +41,3 @@ async def main_teletips():
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
 Date_Time_Userbot_teletips.run()
-
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
