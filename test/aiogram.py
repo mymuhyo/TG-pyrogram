@@ -1,11 +1,11 @@
 import asyncio
 import logging
 import sys
-import aiogram
+import test.aiogram as aiogram
 from os import getenv
 from typing import Any, Dict
 
-from aiogram import Bot, Dispatcher, F, Router, html
+from test.aiogram import Bot, Dispatcher, F, Router, html
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
