@@ -37,7 +37,7 @@ async def send_me(Client , messange):
         await messange.reply_text("Habaringiz @muhyo07 ga yuborildi Agar 3 soat ichida javob yozmasa Iltimos qaytattan yozing")
         await app.send_message('muhyohistory' , f'{xabar}' )
     else:
-        await messange.reply_text("Ihlaypti")
+        await messange.reply_text("Ishlaypti")
 
 
 
