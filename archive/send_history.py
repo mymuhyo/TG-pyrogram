@@ -1,6 +1,6 @@
 from pyrogram import Client , filters
 
-app = Client("muhyohelp")
+app = Client("muhyohelp1")
 
 @app.on_message(filters.text)
 async def send_me(Client , messange):
