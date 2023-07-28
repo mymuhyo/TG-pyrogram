@@ -4,10 +4,13 @@ import datetime
 import pytz
 import asyncio
 import random
-# api_id_help = 26163245
-# api_hash_help = "8928271745e15652485f24c961c145c6"
+api_id = 26163245
+api_hash = "8928271745e15652485f24c961c145c6"
 
-app = Client("muhyohelp")
+app = Client(
+    "muhyotemp",
+    api_id=api_id, api_hash=api_hash
+)
 
 async def time_bio_changer():
         while True:
